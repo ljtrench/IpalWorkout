@@ -75,6 +75,38 @@
                         <input type="submit" value="Sign In" class="button-gradient">
                     </form>
                     <p>Not registered? <a href="#" id="register-link">Click here to register</a></p> 
+                </div>
+
+                <!-- Registration Form (Hidden by Default) -->
+                <div id="registration-form" style="display: none;">
+                    <h4>Register</h4>
+                    <form id="register-form">
+                        <label for="reg-email">Email:</label><br>
+                        <input type="email" id="reg-email" name="email" required><br><br>
+                        <label for="reg-username">Username:</label><br>
+                        <input type="text" id="reg-username" name="username" required><br><br>
+                        <label for="reg-password">Password:</label><br>
+                        <input type="password" id="reg-password" name="password" required><br><br>
+                        <label for="reg-first-name">First Name:</label><br>
+                        <input type="text" id="reg-first-name" name="first_name" required><br><br>
+                        <label for="reg-last-name">Last Name:</label><br>
+                        <input type="text" id="reg-last-name" name="last_name" required><br><br>
+                        <label for="reg-gender">Gender:</label><br>
+                        <select id="reg-gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select><br><br>
+                        <label for="reg-curr-weight">Current Weight:</label><br>
+                        <input type="number" id="reg-curr-weight" name="curr_weight" step="0.1" required><br><br>
+                        <label for="reg-height-inches">Height (in inches):</label><br>
+                        <input type="number" id="reg-height-inches" name="height_inches" required><br><br>
+                        <label for="reg-goal-weight">Goal Weight:</label><br>
+                        <input type="number" id="reg-goal-weight" name="goal_weight" step="0.1" required><br><br>
+                        <label for="reg-dob">Date of Birth:</label><br>
+                        <input type="date" id="reg-dob" name="date_of_birth" required><br><br>
+                        <input type="submit" value="Register" class="button-gradient">
+                    </form>
+                    <p>Already registered? <a href="#" id="login-link">Click here to sign in</a></p> 
                 </div> 
             </div>
         </div>
@@ -107,20 +139,55 @@
 
         document.getElementById('register-link').addEventListener('click', function(event) {
             event.preventDefault();
-            const username = prompt('Enter a username:');
-            const password = prompt('Enter a password:');
+            document.getElementById('sign-in-form').style.display = 'none';
+            document.getElementById('registration-form').style.display = 'block';
+        });
+
+        document.getElementById('login-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('registration-form').style.display = 'none';
+            document.getElementById('sign-in-form').style.display = 'block';
+        });
+
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('reg-email').value;
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+            const firstName = document.getElementById('reg-first-name').value;
+            const lastName = document.getElementById('reg-last-name').value;
+            const gender = document.getElementById('reg-gender').value;
+            const currWeight = parseFloat(document.getElementById('reg-curr-weight').value);
+            const heightInches = parseInt(document.getElementById('reg-height-inches').value);
+            const goalWeight = parseFloat(document.getElementById('reg-goal-weight').value);
+            const dateOfBirth = document.getElementById('reg-dob').value;
 
             fetch('http://localhost:3000/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ username, password })
+                body: JSON.stringify({
+                    email,
+                    username,
+                    password,
+                    first_name: firstName,
+                    last_name: lastName,
+                    gender,
+                    curr_weight: currWeight,
+                    height_inches: heightInches,
+                    goal_weight: goalWeight,
+                    date_of_birth: dateOfBirth
+                })
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
                     alert('Registration successful!');
+                    // Optionally, redirect to the sign-in form
+                    document.getElementById('registration-form').style.display = 'none';
+                    document.getElementById('sign-in-form').style.display = 'block';
                 } else {
                     alert('Registration failed: ' + data.message);
                 }
