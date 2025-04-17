@@ -1,0 +1,1119 @@
+/* --- General Styles --- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* --- Header Styles --- */
+.header {
+  background-color: #0ed8f3;
+  color: white;
+  padding: 10px 20px;
+  text-align: center; /* Center everything on mobile */
+  display: flex;          /* Use Flexbox */
+  flex-direction: column; /* Stack text and nav vertically (mobile-first) */
+  align-items: center;    /* Center horizontally (mobile) */
+  justify-content: space-between; /* Added to distribute space */
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.header-logo {
+  width: 50px; /* Adjust this value to control the logo size in the header */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle;
+  margin-right: 10px; /* Add some spacing between the logo and navigation */
+  border-radius: 50%; /* Make the header logo circular */
+  object-fit: contain; /* Ensure the image fits within the circle */
+}
+
+.header-text {
+  font-size: 1.5rem; /* Or whatever size you want */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between text and nav on mobile */
+  order: 1;             /* Place text AFTER the nav on mobile */
+}
+.header-text i {
+  margin: 0 5px; /* Adds 5 pixels of margin to the left and right of the icons */
+}
+
+/* --- Logo Image Styles --- */
+.logo-section {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center;
+  padding: 20px;
+  max-width: 400px; /* Match the max-width of the login form */
+  width: 100%; /* Ensure it takes the full width of its container */
+}
+
+.logo-image {
+  margin-bottom: 10px;
+}
+.circle-image {
+  border-radius: 50%;
+  object-fit: contain; /* Or 'cover' depending on desired effect */
+  max-width: 100%; /* Make the image scale within its container */
+  max-height: 400px; /* Limit the maximum height to match login form */
+  width: auto;
+  height: auto;
+}
+
+/* --- Navigation Styles --- */
+nav {
+  position: relative; /* For hamburger positioning */
+  width: 100%;
+  order: 2; /* Place nav BEFORE the text on mobile*/
+  display: flex;
+  justify-content: flex-start; /* Reset justify-content */
+  padding: 10px 20px; /* Add some padding around the nav area */
+  background-color: transparent; /* Make the nav background transparent by default on mobile */
+}
+
+.menu {
+  list-style: none;
+  display: none; /* Hidden by default (mobile) */
+  flex-direction: column; /* Stack links vertically (mobile) */
+  align-items: stretch; /* Make each item take the full width */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Full width for the menu when open */
+  /* background-color: #f311a0; Removed pink background from here */
+}
+
+.menu.open {
+  display: flex; /* Show when hamburger is clicked */
+}
+
+.menu li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px; /* Add some space between the rectangles on mobile */
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  display: block; /* Make the link fill the entire list item */
+  box-sizing: border-box;
+  background-color: #f311a0; /* Set the pink background for the rectangles */
+  border-radius: 5px; /* Add rounded corners back */
+  transition: background-color 0.3s; /* Hover effect will be on the .menu itself */
+}
+
+.menu li a:hover {
+  background-color: #555; /* Darken on hover */
+}
+
+/* --- Hamburger Button Styles --- */
+#menu-toggle {
+  cursor: pointer;
+  position: absolute; /* Keep it positioned absolutely */
+  top: -15px;
+  right: 20px; /* Adjust right margin to match nav padding */
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  z-index: 100;
+}
+
+#menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+#menu-toggle span:last-child {
+  margin-bottom: 0;
+}
+
+/* Hamburger Animation */
+#menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: red;
+}
+
+#menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+  background-color: red;
+}
+
+#menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: red;
+}
+
+/* --- Desktop Styles (Larger Screens) --- */
+@media (min-width: 769px) {
+  .header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .header-text {
+      margin-bottom: 0;
+      order: 0;
+      margin-left: auto; /* Push to the right */
+      margin-right: 100px; /* Add some right margin for spacing */
+      text-align: right; /* Align text to the right on desktop */
+
+  }
+  nav {
+      padding: 10px 20px;
+      width: auto;
+      order: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border-left: none;
+      border-right: none;
+  }
+
+  .menu {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent; /* No background on desktop menu */
+  }
+  nav .menu li {
+      width: auto;
+      margin-bottom: 0;
+      text-align: initial;
+      margin-left: 10px;
+  }
+  nav .menu li:first-child {
+      margin-left: 0;
+  }
+
+  nav .menu li a {
+      display: block;
+      width: auto;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-color: #f311a0;
+      padding: 10px 20px;
+  }
+  nav .menu li a:hover {
+      background-color: #555;
+  }
+
+  #menu-toggle {
+      display: none;
+  }
+
+  /* Grid layout for login page on desktop */
+  body.login-page main { /* Target the main element within the login page */
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Keep main aligned to center vertically */
+      flex-grow: 1;
+      overflow-x: hidden;
+  }
+
+  body.login-page .main-content { /* Target main-content only on the login page */
+      display: grid;
+      grid-template-columns: auto auto; /* Let content define column widths */
+      /*grid-template-rows: auto auto;  Let content define row heights MIGHT HAVE TO UNCOMMENT THIS LINE !!!*/
+      justify-content: center; /* Center the grid horizontally */
+      align-items: start; /* Vertically align items TO THE START */
+      gap: 20px; /* Space between grid items */
+      max-width: 900px; /* Adjust as needed for the overall width */
+      margin: 0 auto; /* Center the container on the page */
+      padding: 20px; /* Add some padding around the main content */
+  }
+
+  body.login-page .logo-section { /* Target logo-section only on the login page */
+      grid-column: 1; /* Place in the first column */
+      grid-row: 1; /* Place in the first row */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: start; /* Align logo section itself to the top of the grid row */
+  }
+
+  body.login-page .login-section {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; /* Changed */
+    align-items: start; /* Align form to the top of its grid area */
+    width: 100%;
+}
+
+body.login-page #registration-form {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  align-self: start; /* Align registration form to top as well */
+}
+
+
+  body.login-page .login-form { /* Ensure the form maintains its max width */
+      max-width: 400px; /* Keep the max-width of the form */
+      width: 100%; /* Make the form responsive within its section */
+      margin: 0 auto; /* Center within the section */
+  }
+
+  body.login-page .scrolling-text-container {
+    grid-column: 1 / 3; /* Span across both columns */
+    grid-row: 2; /* Place BELOW logo/login */
+    width: 100%; /* Ensure it spans the grid columns */
+    /* max-width: 500px; */ /* <<< REMOVED max-width */
+    /* margin-left: auto; */ /* REMOVED */
+    /* margin-right: auto; */ /* REMOVED */
+    margin-top: 30px; /* Keep vertical space */
+    margin-bottom: 30px; /* Keep vertical space */
+}
+
+body.login-page #homepage-videos {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  margin-bottom: 30px;
+  width: 100%; /* Ensure it spans the grid columns */
+  display: block; /* Or flex if you want videos side-by-side */
+  /* If using flex for side-by-side videos: */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+  /* gap: 20px; */
+  /* flex-wrap: wrap; */
+}
+}
+
+/* --- Contact Page Specific Styles --- */
+.contact-content {
+  padding: 20px;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .header,
+body.dark-mode nav {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .menu li a {
+  color: #fff;
+  background-color: #f311a0; /* Darker background for the rectangles in dark mode */
+}
+
+body.dark-mode .menu li a:hover {
+  background-color: #555; /* Hover effect in dark mode */
+}
+
+body.dark-mode #menu-toggle span {
+  background-color: #00f;
+}
+
+body.dark-mode #menu-toggle.open span {
+  background-color: #f00;
+}
+
+body.dark-mode #color-mode-switch svg {
+  fill: #fff;
+}
+body.dark-mode .header-text{
+  color: #fff;
+}
+
+/* Style the dark mode switch */
+#color-mode-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+#color-mode-switch input[type="checkbox"] { /* attempt to delete the square in the dark mode toggle */
+  display: none;
+}
+
+#color-mode-switch svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}
+
+footer {
+  background-color: #333;
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+/* Default main styles (mobile first) */
+main {
+  display: flex; /* Make main a flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-grow: 1; /* Allow it to grow to fill available space */
+  overflow-x: hidden;
+  width: 100%; /* Ensure main takes full width */
+}
+/* --- New Main Content Container --- */
+.main-content {
+    display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  align-items: center;     /* Center horizontally on mobile */
+  width: 100%; /* Ensure it takes full width */
+  padding: 0 15px; /* Add padding for mobile */
+}
+
+/* --- About Page Styles --- */
+.about-page .about-content {
+  padding: 20px;
+  text-align: center;
+
+}
+
+.about-page .about-content h1 {
+  text-align: center;
+}
+
+.about-page .about-image {
+  max-width: 80%; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+
+body.dark-mode .about-page .about-content {
+  background-color: #1e1e1e;
+}
+
+/* --- Login Form Styles --- */
+
+.login-section {
+  width: 100%; /* Take full width of the main-content */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center the content horizontally */
+  padding: 20px 0; /* Add some vertical padding if needed */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  /* display: flex; Added by JS potentially, ensure it's flex if needed initially */
+}
+
+.login-form {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Use full width of its container (.login-section) */
+  max-width: 400px; /* <<< KEEPING this max-width */
+  box-sizing: border-box;
+  margin: 0 auto; /* Center horizontally within .login-section */
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-form .form-group { /* Add spacing below form groups */
+    margin-bottom: 15px;
+}
+
+.login-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode Styles for the Form */
+body.dark-mode .login-form {
+  background-color: #383838;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* White shadow */
+}
+
+body.dark-mode .login-form input[type="text"],
+body.dark-mode .login-form input[type="password"] {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .login-form button[type="submit"] {
+  background-color: #0056b3;
+}
+
+body.dark-mode .register-link a {
+  color: #66b3ff;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center; /* Center the error message */
+}
+
+/*Dark mode for error*/
+body.dark-mode .error-message {
+  color: #f00;
+}
+
+/* --- Trophy Styles --- */
+.trophy-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+.trophy {
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
+  max-width: 100px;
+  margin: 0 10px;
+  transition: transform 0.3s ease; /* Add transition here */
+}
+
+/* Hover effect - now includes animation */
+.trophy:hover i {
+  animation: spin 0.5s linear;
+  transform-origin: center;
+}
+
+.trophy i {
+  font-size: 3rem;
+  color: #ffd700; /* Default: Gold color */
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Specific trophy colors */
+#gold-trophy i {
+  color: #ffd700;
+}
+
+#silver-trophy i {
+  color: #c0c0c0;
+}
+
+#bronze-trophy i {
+  color: #cd7f32;
+}
+
+.trophy span {
+  display: block;
+  font-size: 1rem;
+}
+
+/* --- Keyframes for the Spin Animation --- */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Dark Mode for Trophies */
+body.dark-mode .trophy-section {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .trophy span {
+  color: #fff;
+}
+
+/* --- Scrolling Text Animation --- */
+.scrolling-text-container {
+  width: 100%; /* Take full width available */
+  /* max-width: 500px; */ /* <<< REMOVED max-width */
+  background-color: #0ed8f3;
+  color: white;
+  overflow: hidden;
+  padding: 15px 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  /* margin: 30px auto; */ /* Changed */
+  margin: 30px 0; /* Keep vertical margin, remove horizontal auto margin */
+  text-align: center;
+}
+.scrolling-text {
+  display: inline-block; /* Allows the text to move horizontally */
+  padding-left: 100%; /* Start the text completely off-screen to the right */
+  animation: scrollText 15s linear infinite; /* Adjust the 15s to control the speed */
+  font-size: 1.2em; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold if you like */
+}
+
+@keyframes scrollText {
+  0% {
+      transform: translateX(0%); /* Start position (off-screen right) */
+  }
+  100% {
+      transform: translateX(-100%); /* End position (off-screen left) */
+  }
+}
+
+/* Dark Mode Styles for the Scrolling Text */
+body.dark-mode .scrolling-text-container {
+  background-color: #333; /* Dark background in dark mode */
+  color: #eee; /* Light text in dark mode */
+}
+
+/* --- Only apply hover styles on devices that support hover --- */
+@media (hover: hover) {
+  .trophy:hover i {
+      animation: spin 0.5s linear;
+  }
+}
+
+/* --- Calendar Page Specific Main Style --- */
+body.calendar-page main {
+  flex-direction: column; /* Stack the children vertically */
+  align-items: stretch;   /* Make children take full width */
+}
+
+
+
+
+/* --- Styles for the smaller circles in about.html --- */
+.smaller-circles-container {
+display: flex; /* Arrange circles horizontally */
+justify-content: space-around; /* Distribute space around the circles */
+align-items: center; /* Center the circles vertically */
+margin-top: 20px; /* Add some space above the circles */
+gap: 20px; /* Increased space between the circles */
+width: 90%; /* Increased width of the container to allow more space */
+max-width: 700px; /* Limit the maximum width of the container */
+margin-left: auto;
+margin-right: auto;
+flex-wrap: wrap; /* Allow circles to wrap to the next line on smaller screens */
+}
+
+.smaller-circle {
+width: 90px; /* Increased size of the circles */
+height: 90px; /* Increased size of the circles */
+border-radius: 50%; /* Make them circular */
+background-color: #ddd; /* Placeholder background color */
+flex-shrink: 0; /* Prevent circles from shrinking too much */
+max-width: 100%; /* Make each circle responsive within its container (flex item) */
+box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+margin-bottom: 10px; /* Add some margin below each circle if they wrap */
+cursor: pointer; /* Indicate the image is interactive */
+transition: transform 0.3s ease-in-out; /* Smooth transition for the scaling effect */
+}
+
+.smaller-circle:hover {
+transform: scale(2.5); /* Adjust the scaling factor to match the iPal Robot image size */
+z-index: 1; /* Bring the hovered image to the front */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow on hover */
+}
+
+.team-member {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 15px; /* Add some margin below each team member block */
+}
+
+.team-member p {
+margin-top: 5px; /* Space between the circle and the name */
+text-align: center; /* Center the names under the circles */
+}
+
+/* Dark mode styles for the smaller circles */
+body.dark-mode .smaller-circle {
+background-color: #333; /* Dark background for dark mode */
+}
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 600px) {
+.smaller-circles-container {
+    justify-content: space-around; /* Keep space-around on mobile too, might adjust later */
+}
+
+.smaller-circle {
+    width: 70px; /* Slightly smaller circles on mobile */
+    height: 70px;
+}
+}
+
+
+/* Style for the registration form container */
+#registration-form { /* The container div */
+  /* display: none; /* Controlled by JS */
+  /* The following styles apply when it IS displayed */
+  display: flex; /* Use flex for the inner content */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 15px; /* Space between form elements */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Similar background to login form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Similar shadow */
+  width: 100%; /* Make it responsive */
+  max-width: 400px; /* Maximum width */
+  margin: 20px auto; /* Center the form */
+  box-sizing: border-box;
+}
+#registration-form .about-content { /* Styles for the content wrapper inside */
+    padding: 0; /* Remove extra padding if container has it */
+    text-align: center;
+}
+
+
+#registration-form h1 { /* Style the h1 inside */
+    font-size: 1.8em; /* Adjust size */
+    margin-bottom: 10px;
+}
+#registration-form h4 { /* Style the h4 inside */
+text-align: center;
+margin-bottom: 20px;
+color: #333; /* Similar heading color */
+}
+
+/* Style for labels within the registration form */
+#registration-form label {
+font-weight: bold;
+color: #555; /* Similar label color */
+display: block; /* Make labels take full width */
+margin-bottom: 5px;
+text-align: left; /* Align labels left */
+}
+
+/* Style for input fields and select dropdown within the registration form */
+#registration-form input[type="email"],
+#registration-form input[type="text"],
+#registration-form input[type="password"],
+#registration-form input[type="number"],
+#registration-form input[type="date"],
+#registration-form select {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+width: 100%; /* Use 100% width */
+box-sizing: border-box; /* Ensure padding and border are inside the element's width */
+margin-bottom: 10px; /* Space below inputs */
+}
+
+/* Style for the submit button */
+#registration-form input[type="submit"] {
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+background-color: #007bff; /* Example button color (adjust to your button-gradient) */
+color: white;
+font-size: 18px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+width: 100%; /* Full width button */
+margin-top: 10px; /* Add margin above button */
+}
+
+#registration-form input[type="submit"]:hover {
+background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style for the "Already registered?" paragraph */
+#registration-form p {
+text-align: center;
+margin-top: 15px;
+color: #777;
+}
+
+#registration-form p a {
+color: #007bff;
+text-decoration: none;
+}
+
+#registration-form p a:hover {
+text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens (example) */
+@media (max-width: 600px) {
+#registration-form {
+    padding: 15px;
+    margin: 10px auto;
+}
+
+#registration-form input[type="email"],
+#registration-form input[type="text"],
+#registration-form input[type="password"],
+#registration-form input[type="number"],
+#registration-form input[type="date"],
+#registration-form select {
+    font-size: 14px;
+    padding: 8px;
+}
+
+#registration-form input[type="submit"] {
+    font-size: 16px;
+    padding: 10px 15px;
+}
+}
+/* Dark mode for registration form */
+body.dark-mode #registration-form {
+    background-color: #383838; /* Darker background */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lighter shadow */
+    color: #eee; /* Lighter text */
+}
+body.dark-mode #registration-form h1,
+body.dark-mode #registration-form h4,
+body.dark-mode #registration-form label,
+body.dark-mode #registration-form p {
+    color: #eee; /* Lighter text color for headings, labels, paragraphs */
+}
+body.dark-mode #registration-form input[type="email"],
+body.dark-mode #registration-form input[type="text"],
+body.dark-mode #registration-form input[type="password"],
+body.dark-mode #registration-form input[type="number"],
+body.dark-mode #registration-form input[type="date"],
+body.dark-mode #registration-form select {
+    background-color: #555; /* Darker input background */
+    border-color: #777; /* Different border color */
+    color: #eee; /* Lighter input text color */
+}
+body.dark-mode #registration-form input[type="submit"] {
+    background-color: #0056b3; /* Adjust button color if needed */
+}
+body.dark-mode #registration-form p a {
+    color: #66b3ff; /* Lighter link color */
+}
+
+
+/* --- Quotes Section Styles --- */
+.quotes-section {
+  padding: 20px;
+  background-color: #f8f8f8; /* Optional: Background color for the section */
+  border-bottom: 1px solid #eee; /* Optional: Separator */
+}
+
+.quotes-container {
+  display: flex;
+  flex-direction: row; /* Display quotes in a single line on desktop */
+  justify-content: center; /* Center the quotes horizontally */
+  align-items: center; /* Center quotes vertically in the row */
+  gap: 15px; /* Space between quotes */
+  padding: 15px;
+  width: 90%;
+  max-width: 1200px; /* Adjust as needed for your desired desktop width */
+  margin: 0 auto; /* Center the container */
+  flex-wrap: wrap; /* Allow quotes to wrap to multiple lines on smaller screens */
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  color: #555; /* Adjust color as needed */
+  padding: 10px;
+  border: 1px solid #ddd; /* Optional: Border around each quote */
+  border-radius: 5px; /* Optional: Rounded corners for quotes */
+  background-color: white; /* Optional: Background for each quote */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* Optional: Subtle shadow */
+  margin-bottom: 10px; /* Add some bottom margin for spacing when wrapped */
+}
+
+/* Mobile layout (adjust if needed) */
+@media (max-width: 767px) {
+  .quotes-container {
+      justify-content: center; /* You can change this to flex-start or space-around if you prefer */
+      /* flex-direction: row; remains to allow wrapping */
+  }
+  .quote {
+      width: 100%; /* Make quotes take full width on mobile */
+  }
+}
+
+/* Desktop layout (remove the multi-row specific styles) */
+@media (min-width: 768px) {
+  .quotes-container {
+      /* flex-direction: row; already set above */
+      justify-content: center; /* Keep centering on desktop */
+      align-items: center;
+  }
+  .quote {
+      width: auto; /* Adjust width based on content on desktop */
+  }
+}
+
+/* Larger screens adjustment (optional) */
+@media (min-width: 1200px) {
+  .quotes-container {
+      justify-content: center; /* Maintain center alignment */
+  }
+}
+
+
+/* Fixed Video Placement (Example - if used elsewhere) */
+.fixed-video-placement {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+.video-content {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video-content video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+}
+
+/* Desktop adjustment - ONLY changes width */
+@media (min-width: 768px) {
+  .fixed-video-placement {
+    padding: 0 20px;
+  }
+  .video-content {
+    max-width: 600px; /* Slightly wider on desktop */
+    margin: 0 auto; /* Center while maintaining position */
+  }
+}
+
+
+/* --- Sticky Logo Styles --- */
+
+.sticky-logo-wrapper.make-sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 20px; /* Adjust this value - How far from the top it should stick? */
+              /* Consider your header height if you have a fixed header */
+  z-index: 10; /* Ensure it stays above other content if necessary */
+  /* The logo will stick relative to the viewport *within* the bounds
+      of its parent (.main-content on desktop grid). */
+}
+
+/* Optional: Ensure the parent grid cell behaves well */
+.logo-section {
+    /* Usually not needed, but uncomment if sticky doesn't work */
+     align-self: start;
+}
+
+/* Home Video Container (General - If used elsewhere) */
+.home-video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.video-wrapper {
+  margin-bottom: 30px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+}
+
+/* Hide videos in registration form (Specific rule for this container type) */
+#registration-form .home-video-container {
+  display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-video-container {
+      padding: 0 15px;
+      margin: 20px auto;
+  }
+  .video-wrapper {
+      margin-bottom: 20px;
+  }
+}
+
+/* HOME PAGE VIDEOS - STYLING AND DEFAULT STATE */
+#homepage-videos {
+  /* order: 100; /* Order might not be needed if using grid */
+  width: 100%;
+  margin: 30px 0;
+  display: block; /* Default to block, JS will hide/show */
+  box-sizing: border-box;
+}
+
+.video-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto 30px;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block; /* Ensure video takes up space */
+}
+
+/* --- REMOVED OBSOLETE/INCORRECT HIDING RULES --- */
+/*
+body.login-page #registration-form #homepage-videos {
+  display: none !important;
+}
+#registration-form .home-videos-container {
+   display: none !important;
+}
+.about-page .homepage-videos {
+   display: none !important;
+}
+*/
+
+/* Example styling for other video containers if they exist */
+/* HOME PAGE VIDEO CONTAINER */
+.home-videos-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home-video-item {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.home-video-item video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+}
+
+/* Hide these videos in registration form specifically */
+#registration-form .home-videos-container {
+  display: none !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .home-videos-container {
+    padding: 0 15px;
+  }
+  .home-video-item {
+    margin-bottom: 20px;
+  }
+}
+/* Another example video style */
+.homepage-videos {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.homepage-video {
+  margin-bottom: 30px;
+}
+
+.homepage-video video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+}
+
+/* HIDE THESE VIDEOS IN REGISTRATION FORM */
+#registration-form .homepage-videos { /* Updated selector */
+  display: none !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .homepage-videos {
+      padding: 0 15px;
+      margin: 20px auto;
+  }
+}
+/* --- CSS for Mouse Following Effect (Revised) --- */
+.sticky-logo-wrapper.js-mouse-follow-active {
+  position: fixed;
+  /* left: 20px; */ /* <<< REMOVE or COMMENT OUT this line */
+  top: 0;      
+  /* width: 150px; */ /* Set width if needed */
+  /* height: 150px; */ /* Set height if needed */
+  z-index: 10; 
+  transform: translateY(0px); 
+  will-change: transform; 
+  /* border: 2px solid purple; */ /* Optional for testing */
+}
+
+/* Ensure original wrapper doesn't have conflicting transform */
+.sticky-logo-wrapper {
+    transform: none; 
+}

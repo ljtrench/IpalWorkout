@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPalWebsite2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styles for feedback messages (add to your style.css) */
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="login-page">
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <img src="ipalRobot_image.jpg" alt="iPal Robot Trainer Logo" class="header-logo">
+        </a>
+        <h1 class="header-text"><i class="fas fa-bolt"></i> iPal ROBOT TRAINER <i class="fas fa-bolt"></i></h1>
+        <nav>
+            <button id="menu-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <section class="logo-section">
+                <div class="sticky-logo-wrapper">
+                    <img src="ipalRobot_image.jpg" alt="iPal Robot Trainer Logo" class="circle-image">
+                </div>
+            </section>
+
+            <section class="login-section">
+                <form class="login-form" id="login-form">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p id="login-error-message" class="error-message"></p> <p class="register-link">Not registered? <a href="#" id="register-link">Click here</a></p>
+                </form>
+            </section>
+
+            <div id="registration-form" style="display: none;" class="about-page">
+                <section class="about-content">
+                    <h1>Create Your Account</h1>
+                    <p>Join our fitness community and start your journey with iPal Robot Trainer today!</p>
+
+                    <h4>Register</h4>
+                    <form id="register-form">
+                        <label for="reg-email">Email:</label><br>
+                        <input type="email" id="reg-email" name="email" required><br><br>
+                        <label for="reg-username">Username:</label><br>
+                        <input type="text" id="reg-username" name="username" required><br><br>
+                        <label for="reg-password">Password:</label><br>
+                        <input type="password" id="reg-password" name="password" required><br><br>
+                        <label for="reg-first-name">First Name:</label><br>
+                        <input type="text" id="reg-first-name" name="first_name" required><br><br>
+                        <label for="reg-last-name">Last Name:</label><br>
+                        <input type="text" id="reg-last-name" name="last_name" required><br><br>
+                        <label for="reg-gender">Gender:</label><br>
+                        <select id="reg-gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select><br><br>
+                        <label for="reg-curr-weight">Current Weight:</label><br>
+                        <input type="number" id="reg-curr-weight" name="curr_weight" step="0.1" required><br><br>
+                        <label for="reg-height-inches">Height (in inches):</label><br>
+                        <input type="number" id="reg-height-inches" name="height_inches" required><br><br>
+                        <label for="reg-goal-weight">Goal Weight:</label><br>
+                        <input type="number" id="reg-goal-weight" name="goal_weight" step="0.1" required><br><br>
+                        <label for="reg-dob">Date of Birth:</label><br>
+                        <input type="date" id="reg-dob" name="date_of_birth" required><br><br>
+                        <input type="submit" value="Register" class="button-gradient">
+                        <p id="register-success-message" class="success-message" style="display: none;"></p>
+                        <p id="register-error-message" class="error-message" style="display: none;"></p>
+                    </form>
+                    <p>Already registered? <a href="#" id="login-link">Click here to sign in</a></p>
+                </section>
+            </div>
+
+            <div class="scrolling-text-container">
+                <div role="marquee" aria-label="Scrolling announcement">
+                    <span class="scrolling-text">01010101 DANCE ROBOT 0101010 &nbsp;&nbsp;&nbsp; 01010101 DANCE ROBOT 0101010 &nbsp;&nbsp;&nbsp; 01010101 DANCE ROBOT 0101010 &nbsp;&nbsp;&nbsp; 01010101 DANCE ROBOT 0101010</span>
+                </div>
+            </div>
+
+            <div id="homepage-videos">
+                <div class="video-box">
+                    <video controls playsinline>
+                        <source src="awyZvpQ_460svvp9.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls playsinline>
+                        <source src="aZDeQvn_460svvp9.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls playsinline>
+                        <source src="armzygB_460svvp9.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div id="color-mode-switch" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <input type="checkbox" id="switch" aria-label="Toggle Dark Mode">
+            <label class="switch-icon" for="switch">Dark Mode Toggle</label>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // --- Get references to elements ONCE ---
+        const loginSection = document.querySelector('.login-section');
+        const registrationFormDiv = document.getElementById('registration-form');
+        const homepageVideos = document.getElementById('homepage-videos');
+        const logoWrapper = document.querySelector('.sticky-logo-wrapper');
+        const registerLink = document.getElementById('register-link');
+        const loginLink = document.getElementById('login-link');
+        const registerFormSubmit = document.getElementById('register-form'); // The actual form element
+        const loginFormSubmit = document.getElementById('login-form'); // Get login form element
+
+        // --- Elements for Registration Feedback ---
+        const registerSuccessMsg = document.getElementById('register-success-message');
+        const registerErrorMsg = document.getElementById('register-error-message');
+        // --- Element for Login Feedback ---
+        const loginErrorMsgElem = document.getElementById('login-error-message');
+
+
+        // --- Check if elements exist before adding listeners ---
+        if (registerLink && loginSection && registrationFormDiv && homepageVideos) {
+            // --- Register Link Click (Show Registration) ---
+            registerLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                loginSection.style.display = 'none';
+                registrationFormDiv.style.display = 'block';
+                homepageVideos.style.display = 'none'; // Hide videos
+                // Clear any previous registration messages
+                if (registerSuccessMsg) registerSuccessMsg.style.display = 'none';
+                if (registerErrorMsg) registerErrorMsg.style.display = 'none';
+                // Clear login error message when switching views
+                if (loginErrorMsgElem) loginErrorMsgElem.textContent = '';
+            });
+        }
+
+        if (loginLink && loginSection && registrationFormDiv && homepageVideos) {
+            // --- Login Link Click (Show Login) ---
+            loginLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                registrationFormDiv.style.display = 'none';
+                loginSection.style.display = 'flex'; // Show login
+                homepageVideos.style.display = 'block'; // Show videos
+                // Clear registration messages when switching views
+                if (registerSuccessMsg) registerSuccessMsg.style.display = 'none';
+                if (registerErrorMsg) registerErrorMsg.style.display = 'none';
+                // Clear login error message just in case
+                if (loginErrorMsgElem) loginErrorMsgElem.textContent = '';
+            });
+        }
+
+        // --- Registration Form Submission ---
+        if (registerFormSubmit) {
+            registerFormSubmit.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Clear previous messages
+                if (registerSuccessMsg) registerSuccessMsg.style.display = 'none';
+                if (registerErrorMsg) registerErrorMsg.style.display = 'none';
+
+                // --- Form data collection ---
+                const email = document.getElementById('reg-email').value.trim();
+                const username = document.getElementById('reg-username').value.trim();
+                const password = document.getElementById('reg-password').value;
+                const firstName = document.getElementById('reg-first-name').value.trim();
+                const lastName = document.getElementById('reg-last-name').value.trim();
+                const gender = document.getElementById('reg-gender').value;
+                const currWeight = parseFloat(document.getElementById('reg-curr-weight').value);
+                const heightInches = parseInt(document.getElementById('reg-height-inches').value);
+                const goalWeight = parseFloat(document.getElementById('reg-goal-weight').value);
+                const dateOfBirth = document.getElementById('reg-dob').value;
+                // --- End form data collection ---
+
+                // Basic validation example
+                if (!email || !username || !password || !firstName || !lastName || !gender || isNaN(currWeight) || isNaN(heightInches) || isNaN(goalWeight) || !dateOfBirth) {
+                    if (registerErrorMsg) {
+                        registerErrorMsg.textContent = 'Please fill in all required fields.';
+                        registerErrorMsg.style.display = 'block';
+                    }
+                    return; // Stop submission
+                }
+
+                // --- Fetch call ---
+                // ***** CORRECTED URL: Using relative path *****
+                fetch('api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email, username, password,
+                        first_name: firstName, last_name: lastName, gender,
+                        curr_weight: currWeight, height_inches: heightInches,
+                        goal_weight: goalWeight, date_of_birth: dateOfBirth
+                    })
+                })
+                    .then(response => {
+                        if (!response.ok) { // Check for bad status codes (4xx, 5xx)
+                            return response.json().then(errData => {
+                                throw new Error(errData.message || `Registration failed with status: ${response.status}`);
+                            }).catch(() => { // Fallback if error response not JSON
+                                throw new Error(`Registration failed with status: ${response.status}`);
+                            });
+                        }
+                        return response.json(); // Parse JSON body for successful responses
+                    })
+                    .then(data => {
+                        // Assuming backend sends { success: true/false, message: '...' }
+                        if (data.success) {
+                            if (registerSuccessMsg) {
+                                registerSuccessMsg.textContent = 'Registration successful! Redirecting to login...';
+                                registerSuccessMsg.style.display = 'block';
+                            }
+                            registerFormSubmit.reset(); // Optionally clear form
+                            // Switch back to login view after a short delay
+                            setTimeout(() => {
+                                registrationFormDiv.style.display = 'none';
+                                loginSection.style.display = 'flex';
+                                homepageVideos.style.display = 'block';
+                                if (registerSuccessMsg) registerSuccessMsg.style.display = 'none';
+                            }, 2000); // 2-second delay
+                        } else {
+                            // Handle backend indicating failure even with 200 OK
+                            if (registerErrorMsg) {
+                                registerErrorMsg.textContent = 'Registration failed: ' + (data.message || 'Please check your input.');
+                                registerErrorMsg.style.display = 'block';
+                            }
+                        }
+                    })
+                    .catch(error => { // Catches network errors and errors thrown from .then()
+                        console.error('Registration Error:', error);
+                        if (registerErrorMsg) {
+                            registerErrorMsg.textContent = error.message || 'An error occurred during registration.';
+                            registerErrorMsg.style.display = 'block';
+                        }
+                    });
+                // --- End fetch call ---
+            });
+        }
+
+        // --- ADDED: Login Form Submission ---
+        if (loginFormSubmit) {
+            loginFormSubmit.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+
+                const usernameInput = document.getElementById('username');
+                const passwordInput = document.getElementById('password');
+                // loginErrorMsgElem already defined above
+
+                // Clear previous error message
+                if (loginErrorMsgElem) loginErrorMsgElem.textContent = '';
+
+                const username = usernameInput.value.trim();
+                const password = passwordInput.value; // Don't trim password
+
+                // Basic validation
+                if (!username || !password) {
+                    if (loginErrorMsgElem) loginErrorMsgElem.textContent = 'Please enter both username and password.';
+                    return; // Stop submission
+                }
+
+                // ***** CORRECTED URL: Changed from /api/signin to /api/login *****
+                fetch('api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(errData => {
+                                throw new Error(errData.message || `Login failed with status: ${response.status}`);
+                            }).catch(() => {
+                                throw new Error(`Login failed with status: ${response.status}`);
+                            });
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Assuming backend sends { success: true/false, message: '...', token: '...' }
+                        if (data.success) {
+                            // Successful login - redirect
+                            window.location.href = 'calendar.html'; // Redirects to calendar page
+                        } else {
+                            // Handle backend indicating failure (e.g. Invalid credentials)
+                            if (loginErrorMsgElem) {
+                                loginErrorMsgElem.textContent = data.message || 'Invalid credentials.';
+                            }
+                        }
+                    })
+                    .catch(error => { // Catches network errors and errors thrown from .then()
+                        console.error('Login error:', error);
+                        if (loginErrorMsgElem) {
+                            loginErrorMsgElem.textContent = error.message || 'An error occurred. Please try again.';
+                        }
+                    });
+            });
+        }
+
+
+        // --- Initial setup: Ensure videos are visible if login form is initially shown ---
+        if (loginSection && homepageVideos && window.getComputedStyle(loginSection).display !== 'none') {
+            homepageVideos.style.display = 'block';
+        } else if (registrationFormDiv && homepageVideos && window.getComputedStyle(registrationFormDiv).display !== 'none') {
+            homepageVideos.style.display = 'none'; // Videos hidden if registration shown initially
+        } else if (homepageVideos) {
+            // Default if neither is shown initially (e.g., hide videos)
+            homepageVideos.style.display = 'none';
+        }
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Get Elements ---
+            const logoWrapper = document.querySelector('.sticky-logo-wrapper');
+            const registerLink = document.getElementById('register-link');
+            const loginLink = document.getElementById('login-link');
+            const headerElement = document.querySelector('.header');
+            const footerElement = document.querySelector('.footer');
+
+            // --- Configuration ---
+            const DESKTOP_BREAKPOINT = 769;
+            const VERTICAL_GAP = 15;
+            const ACTIVE_CLASS = 'js-mouse-follow-active';
+
+            // --- Check Core Elements ---
+            if (!logoWrapper || !registerLink || !loginLink || !headerElement || !footerElement) {
+                console.warn("Mouse follow script: Required elements missing.");
+                return;
+            }
+
+            // --- State Variables ---
+            let isMouseFollowing = false;
+            let animationId = null;
+            let mouseY = window.innerHeight / 2;
+            let isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+            // --- Core Update Function ---
+            function updateLogoPosition() {
+                if (!isMouseFollowing || !isDesktop) {
+                    if (isMouseFollowing) stopMouseFollow();
+                    return;
+                }
+                const logoHeight = logoWrapper.offsetHeight;
+                const viewportHeight = window.innerHeight;
+                const headerHeight = headerElement.offsetHeight;
+                const footerHeight = footerElement.offsetHeight;
+                if (logoHeight <= 0) {
+                    animationId = requestAnimationFrame(updateLogoPosition);
+                    return;
+                }
+                const minY = headerHeight + VERTICAL_GAP;
+                const maxY = viewportHeight - footerHeight - logoHeight - VERTICAL_GAP;
+                const effectiveMaxY = Math.max(minY, maxY);
+                const targetY = mouseY - logoHeight / 2;
+                const clampedY = Math.max(minY, Math.min(targetY, effectiveMaxY));
+                logoWrapper.style.transform = `translateY(${clampedY}px)`;
+                animationId = requestAnimationFrame(updateLogoPosition);
+            }
+
+            // --- Mouse Move Handler ---
+            function handleMouseMove(e) {
+                if (!isMouseFollowing || !isDesktop) return;
+                mouseY = e.clientY;
+            }
+
+            // --- Activate Function ---
+            function startMouseFollow() {
+                isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+                if (isMouseFollowing || !isDesktop) return;
+                isMouseFollowing = true;
+                requestAnimationFrame(() => {
+                    mouseY = mouseY || window.innerHeight / 2;
+                    const initialLogoHeight = logoWrapper.offsetHeight;
+                    if (initialLogoHeight <= 0) {
+                        setTimeout(startMouseFollow, 100);
+                        isMouseFollowing = false;
+                        return;
+                    }
+                    const initialHeaderHeight = headerElement.offsetHeight;
+                    const initialFooterHeight = footerElement.offsetHeight;
+                    const initialMinY = initialHeaderHeight + VERTICAL_GAP;
+                    const initialMaxY = window.innerHeight - initialFooterHeight - initialLogoHeight - VERTICAL_GAP;
+                    const initialEffectiveMaxY = Math.max(initialMinY, initialMaxY);
+                    const initialTargetY = mouseY - initialLogoHeight / 2;
+                    const initialClampedY = Math.max(initialMinY, Math.min(initialTargetY, initialEffectiveMaxY));
+                    logoWrapper.style.transform = `translateY(${initialClampedY}px)`;
+                    logoWrapper.classList.add(ACTIVE_CLASS);
+                    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+                    if (animationId) cancelAnimationFrame(animationId);
+                    animationId = requestAnimationFrame(updateLogoPosition);
+                });
+            }
+
+            // --- Deactivate Function ---
+            function stopMouseFollow() {
+                if (!isMouseFollowing) return;
+                isMouseFollowing = false;
+                logoWrapper.classList.remove(ACTIVE_CLASS);
+                requestAnimationFrame(() => {
+                    logoWrapper.style.transform = 'none';
+                });
+                window.removeEventListener('mousemove', handleMouseMove);
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            }
+
+            // --- Resize Listener ---
+            let resizeTimeout;
+            function handleResize() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const wasDesktop = isDesktop;
+                    isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+                    if (wasDesktop && !isDesktop && isMouseFollowing) {
+                        stopMouseFollow();
+                    } else if (!wasDesktop && isDesktop) {
+                        const registrationFormDiv = document.getElementById('registration-form');
+                        if (registrationFormDiv && window.getComputedStyle(registrationFormDiv).display !== 'none') {
+                            startMouseFollow();
+                        }
+                    } else if (isMouseFollowing && isDesktop) {
+                        mouseY = mouseY || window.innerHeight / 2;
+                    }
+                }, 150);
+            }
+            window.addEventListener('resize', handleResize);
+
+            // --- Toggle on register/login clicks ---
+            if (registerLink) registerLink.addEventListener('click', startMouseFollow);
+            if (loginLink) loginLink.addEventListener('click', stopMouseFollow);
+
+            // --- Initial state check ---
+            const registrationFormDivInitial = document.getElementById('registration-form');
+            if (registrationFormDivInitial && window.getComputedStyle(registrationFormDivInitial).display !== 'none') {
+                startMouseFollow();
+            } else {
+                stopMouseFollow();
+            }
+
+        });
+    </script>
+
+</body>
+</html>
