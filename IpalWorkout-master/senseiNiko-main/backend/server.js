@@ -11,10 +11,14 @@ const secret = 'secret'; // Change this to a strong secret!
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000','https://main.d19os6k506ayxk.amplifyapp.com/'],
     credentials: true
 }));
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+    res.json({ status: 'API running', timestamp: new Date() });
+});
 
 // MySQL Connection Pool
 const pool = mysql.createPool({
