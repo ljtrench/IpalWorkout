@@ -1,0 +1,191 @@
+{
+  "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\IpalWorkout\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\IpalWorkout\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\IpalWorkout\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\IpalWorkout\\db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:db.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IpalWorkout-master\\senseiNiko-main\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IpalWorkout-master\\senseiNiko-main\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IpalWorkout-master\\senseiNiko-main\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IpalWorkout-master\\senseiNiko-main\\backend\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IpalWorkout-master\\senseiNiko-main\\backend\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IpalWorkout-master\\senseiNiko-main\\backend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+>>>>>>> f90437f1aa3bd1a30aaa378f69bca780a5484fcf
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+<<<<<<< HEAD
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "db.js",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\db.js",
+              "RelativeDocumentMoniker": "db.js",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\db.js",
+              "RelativeToolTip": "db.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-17T05:35:29.104Z",
+=======
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\package.json",
+              "RelativeDocumentMoniker": "IpalWorkout-master\\senseiNiko-main\\backend\\package.json",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\package.json",
+              "RelativeToolTip": "IpalWorkout-master\\senseiNiko-main\\backend\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-17T23:17:27.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "config.js",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\config.js",
+              "RelativeDocumentMoniker": "IpalWorkout-master\\senseiNiko-main\\backend\\config.js",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\config.js",
+              "RelativeToolTip": "IpalWorkout-master\\senseiNiko-main\\backend\\config.js",
+              "ViewState": "AgIAADwAAAAAAAAAAAAiwF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-17T22:23:30.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "server.js",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\server.js",
+              "RelativeDocumentMoniker": "IpalWorkout-master\\senseiNiko-main\\backend\\server.js",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\backend\\server.js",
+              "RelativeToolTip": "IpalWorkout-master\\senseiNiko-main\\backend\\server.js",
+              "ViewState": "AgIAALAAAAAAAAAAAAAQwNUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-17T21:48:46.317Z",
+>>>>>>> f90437f1aa3bd1a30aaa378f69bca780a5484fcf
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+<<<<<<< HEAD
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\script.js",
+              "RelativeDocumentMoniker": "script.js",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\script.js",
+              "RelativeToolTip": "script.js",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-17T02:04:23.01Z",
+=======
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\index.html",
+              "RelativeDocumentMoniker": "IpalWorkout-master\\senseiNiko-main\\index.html",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\index.html",
+              "RelativeToolTip": "IpalWorkout-master\\senseiNiko-main\\index.html",
+              "ViewState": "AgIAAFEBAAAAAAAAAAAwwHgBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-17T17:04:01.072Z",
+>>>>>>> f90437f1aa3bd1a30aaa378f69bca780a5484fcf
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+<<<<<<< HEAD
+              "Title": "server.js",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\server.js",
+              "RelativeDocumentMoniker": "server.js",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\server.js",
+              "RelativeToolTip": "server.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-17T02:04:21.936Z",
+=======
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\style.css",
+              "RelativeDocumentMoniker": "IpalWorkout-master\\senseiNiko-main\\style.css",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\style.css",
+              "RelativeToolTip": "IpalWorkout-master\\senseiNiko-main\\style.css",
+              "ViewState": "AgIAAEwEAAAAAAAAAAAwwHMEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-17T17:03:55.351Z",
+>>>>>>> f90437f1aa3bd1a30aaa378f69bca780a5484fcf
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+<<<<<<< HEAD
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\IpalWorkout\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAANsAAAAAAAAAAAAmwAQBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-17T02:04:15.265Z",
+=======
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\script.js",
+              "RelativeDocumentMoniker": "IpalWorkout-master\\senseiNiko-main\\script.js",
+              "ToolTip": "C:\\Users\\joe\\source\\repos\\ljtrench\\IpalWorkout\\IpalWorkout-master\\senseiNiko-main\\script.js",
+              "RelativeToolTip": "IpalWorkout-master\\senseiNiko-main\\script.js",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAYwA4BAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-17T17:03:54.568Z",
+>>>>>>> f90437f1aa3bd1a30aaa378f69bca780a5484fcf
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
