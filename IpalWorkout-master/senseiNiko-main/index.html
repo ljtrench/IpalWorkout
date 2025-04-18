@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPalWebsite2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <img src="ipalRobot_image.jpg" alt="iPal Robot Trainer Logo" class="header-logo">
+        </a>
+        <h1 class="header-text"><i class="fas fa-bolt"></i> iPal ROBOT TRAINER <i class="fas fa-bolt"></i></h1>
+        <nav>
+            <button id="menu-toggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <section class="logo-section">
+                <div class="sticky-logo-wrapper">
+                    <img src="ipalRobot_image.jpg" alt="iPal Robot Trainer Logo" class="circle-image">
+                </div>
+            </section>
+
+            <section class="login-section">
+                <form class="login-form" id="login-form" action="calendar.html" method="get">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p id="login-error-message" class="error-message"></p>
+                    <p class="register-link">Not registered? <a href="#" id="register-link">Click here</a></p>
+                </form>
+            </section>
+
+            <div id="registration-form" style="display: none;" class="about-page">
+                <section class="about-content">
+                    <h1>Create Your Account</h1>
+                    <p>Join our fitness community and start your journey with iPal Robot Trainer today!</p>
+
+
+                    <h4>Register</h4>
+                    <form id="register-form">
+                        <label for="reg-email">Email:</label><br>
+                        <input type="email" id="reg-email" name="email" required><br><br>
+                        <label for="reg-username">Username:</label><br>
+                        <input type="text" id="reg-username" name="username" required><br><br>
+                        <label for="reg-password">Password:</label><br>
+                        <input type="password" id="reg-password" name="password" required><br><br>
+                        <label for="reg-first-name">First Name:</label><br>
+                        <input type="text" id="reg-first-name" name="first_name" required><br><br>
+                        <label for="reg-last-name">Last Name:</label><br>
+                        <input type="text" id="reg-last-name" name="last_name" required><br><br>
+                        <label for="reg-gender">Gender:</label><br>
+                        <select id="reg-gender" name="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select><br><br>
+                        <label for="reg-curr-weight">Current Weight:</label><br>
+                        <input type="number" id="reg-curr-weight" name="curr_weight" step="0.1" required><br><br>
+                        <label for="reg-height-inches">Height (in inches):</label><br>
+                        <input type="number" id="reg-height-inches" name="height_inches" required><br><br>
+                        <label for="reg-goal-weight">Goal Weight:</label><br>
+                        <input type="number" id="reg-goal-weight" name="goal_weight" step="0.1" required><br><br>
+                        <label for="reg-dob">Date of Birth:</label><br>
+                        <input type="date" id="reg-dob" name="date_of_birth" required><br><br>
+                        <input type="submit" value="Register" class="button-gradient">
+                    </form>
+                    <p>Already registered? <a href="#" id="login-link">Click here to sign in</a></p>
+                </section>
+            </div>
+
+            <div class="scrolling-text-container">
+                <div role="marquee" aria-label="Scrolling announcement">
+                    <span class="scrolling-text">01010101 DANCE ROBOT 0101010 &nbsp;&nbsp;&nbsp; 01010101 DANCE ROBOT 0101010 &nbsp;&nbsp;&nbsp; 01010101 DANCE ROBOT 0101010 &nbsp;&nbsp;&nbsp; 01010101 DANCE ROBOT 0101010</span>
+                </div>
+            </div>
+
+            <div id="homepage-videos">
+                <div class="video-box">
+                    <video controls playsinline>
+                        <source src="awyZvpQ_460svvp9.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls playsinline>
+                        <source src="aZDeQvn_460svvp9.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls playsinline>
+                        <source src="armzygB_460svvp9.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div id="color-mode-switch" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <input type="checkbox" id="switch" aria-label="Toggle Dark Mode">
+            <label class="switch-icon" for="switch">Dark Mode Toggle</label>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // --- Get references to elements ONCE ---
+        const loginSection = document.querySelector('.login-section'); // Use querySelector for clarity
+        const registrationFormDiv = document.getElementById('registration-form'); // The container div
+        const homepageVideos = document.getElementById('homepage-videos'); // Get the video container
+        const logoWrapper = document.querySelector('.sticky-logo-wrapper'); // Get logo wrapper
+        const registerLink = document.getElementById('register-link');
+        const loginLink = document.getElementById('login-link');
+        const registerFormSubmit = document.getElementById('register-form'); // The actual form element inside the div
+
+        // --- Check if elements exist before adding listeners ---
+        if (registerLink && loginSection && registrationFormDiv && homepageVideos) {
+            // --- Register Link Click ---
+            registerLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                loginSection.style.display = 'none';
+                registrationFormDiv.style.display = 'block';
+                homepageVideos.style.display = 'none'; // Hide videos
+            });
+        }
+
+        if (loginLink && loginSection && registrationFormDiv && homepageVideos) {
+            // --- Login Link Click ---
+            loginLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                registrationFormDiv.style.display = 'none';
+                loginSection.style.display = 'flex'; // Show login (assuming it should be flex, adjust if needed)
+                homepageVideos.style.display = 'block'; // Show videos (assuming it should be block)
+            });
+        }
+
+        if (registerFormSubmit) {
+            // --- Register Form Submission ---
+            // Note: This event listener is on the FORM element, not the container div
+            registerFormSubmit.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // --- Form data collection (existing code) ---
+                const email = document.getElementById('reg-email').value;
+                const username = document.getElementById('reg-username').value;
+                const password = document.getElementById('reg-password').value;
+                const firstName = document.getElementById('reg-first-name').value;
+                const lastName = document.getElementById('reg-last-name').value;
+                const gender = document.getElementById('reg-gender').value;
+                const currWeight = parseFloat(document.getElementById('reg-curr-weight').value);
+                const heightInches = parseInt(document.getElementById('reg-height-inches').value);
+                const goalWeight = parseFloat(document.getElementById('reg-goal-weight').value);
+                const dateOfBirth = document.getElementById('reg-dob').value;
+                // --- End form data collection ---
+
+                // --- Fetch call (existing code) ---
+                fetch('https://main.d19os6k506ayxk.amplifyapp.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email, username, password,
+                        first_name: firstName, last_name: lastName, gender,
+                        curr_weight: currWeight, height_inches: heightInches,
+                        goal_weight: goalWeight, date_of_birth: dateOfBirth
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Registration successful!');
+                            // Switch back to login view
+                            registrationFormDiv.style.display = 'none';
+                            loginSection.style.display = 'flex'; // Show login again
+                            homepageVideos.style.display = 'block'; // Show videos again
+
+                        } else {
+                            alert('Registration failed: ' + data.message);
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                // --- End fetch call ---
+            });
+        }
+
+        // Initial setup: Ensure videos are visible if login form is initially shown
+        // (This depends on your default state, but assuming login is default)
+        if (loginSection && homepageVideos && window.getComputedStyle(loginSection).display !== 'none') {
+            homepageVideos.style.display = 'block';
+        } else if (homepageVideos) {
+            // If login is hidden initially, ensure videos are also hidden
+            homepageVideos.style.display = 'none';
+        }
+
+    </script>
+
+    <!-- NEW: ADDED MOUSE-FOLLOW SCRIPT (NON-INTRUSIVE) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Get Elements ---
+            const logoWrapper = document.querySelector('.sticky-logo-wrapper');
+            const registerLink = document.getElementById('register-link');
+            const loginLink = document.getElementById('login-link');
+            // Elements needed for bounds
+            const headerElement = document.querySelector('.header');
+            const footerElement = document.querySelector('.footer');
+
+            // --- Configuration ---
+            const DESKTOP_BREAKPOINT = 769; // Min width for effect
+            const VERTICAL_GAP = 15;       // Gap from header/footer
+            const ACTIVE_CLASS = 'js-mouse-follow-active'; // CSS class name
+
+            // --- Check Core Elements ---
+            if (!logoWrapper || !registerLink || !loginLink || !headerElement || !footerElement) {
+                console.warn("Mouse follow script: Required elements missing. Effect disabled.");
+                return;
+            }
+
+            // --- State Variables ---
+            let isMouseFollowing = false;
+            let animationId = null;
+            let mouseY = window.innerHeight / 2;
+            let isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+            // --- Core Update Function ---
+            function updateLogoPosition() {
+                // Stop loop if inactive or not desktop
+                if (!isMouseFollowing || !isDesktop) {
+                    if (isMouseFollowing) stopMouseFollow(); // Clean up if deactivated unexpectedly
+                    return;
+                }
+
+                const logoHeight = logoWrapper.offsetHeight;
+                const viewportHeight = window.innerHeight;
+                const headerHeight = headerElement.offsetHeight;
+                const footerHeight = footerElement.offsetHeight;
+
+                if (logoHeight <= 0) { // Check height
+                    console.warn("Mouse Follow: logo height is 0.");
+                    animationId = requestAnimationFrame(updateLogoPosition); // Keep trying
+                    return;
+                }
+
+                // Calculate Boundaries respecting header/footer
+                const minY = headerHeight + VERTICAL_GAP;
+                const maxY = viewportHeight - footerHeight - logoHeight - VERTICAL_GAP;
+                const effectiveMaxY = Math.max(minY, maxY);
+
+                // Target Y to center image on cursor
+                const targetY = mouseY - logoHeight / 2;
+
+                // Clamp position within calculated boundaries
+                const clampedY = Math.max(minY, Math.min(targetY, effectiveMaxY));
+
+                // Apply ONLY the vertical transform
+                logoWrapper.style.transform = `translateY(${clampedY}px)`;
+
+                // Continue the loop
+                animationId = requestAnimationFrame(updateLogoPosition);
+            }
+
+            // --- Mouse Move Handler ---
+            function handleMouseMove(e) {
+                if (!isMouseFollowing || !isDesktop) return;
+                mouseY = e.clientY;
+            }
+
+            // --- Activate Function ---
+            function startMouseFollow() {
+                isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+                if (isMouseFollowing || !isDesktop) {
+                    console.log("Mouse follow not activated (already active or not desktop).");
+                    return;
+                }
+
+                console.log("Starting mouse follow");
+                isMouseFollowing = true;
+                // Use RAF to ensure layout is stable before getting height/pos
+                requestAnimationFrame(() => {
+                    // Set initial Y position based on current mouse (or center)
+                    mouseY = mouseY || window.innerHeight / 2;
+                    const initialLogoHeight = logoWrapper.offsetHeight;
+                    const initialHeaderHeight = headerElement.offsetHeight;
+                    const initialFooterHeight = footerElement.offsetHeight;
+                    const initialMinY = initialHeaderHeight + VERTICAL_GAP;
+                    const initialMaxY = window.innerHeight - initialFooterHeight - initialLogoHeight - VERTICAL_GAP;
+                    const initialEffectiveMaxY = Math.max(initialMinY, initialMaxY);
+                    const initialTargetY = mouseY - initialLogoHeight / 2;
+                    const initialClampedY = Math.max(initialMinY, Math.min(initialTargetY, initialEffectiveMaxY));
+
+                    logoWrapper.style.transform = `translateY(${initialClampedY}px)`; // Apply initial Y
+                    logoWrapper.classList.add(ACTIVE_CLASS); // Add class AFTER setting initial transform
+
+                    window.addEventListener('mousemove', handleMouseMove, { passive: true }); // Attach listener
+
+                    // Start RAF loop
+                    if (animationId) cancelAnimationFrame(animationId);
+                    animationId = requestAnimationFrame(updateLogoPosition);
+                });
+            }
+
+            // --- Deactivate Function ---
+            function stopMouseFollow() {
+                if (!isMouseFollowing) return;
+                console.log("Stopping mouse follow");
+                isMouseFollowing = false;
+                logoWrapper.classList.remove(ACTIVE_CLASS);
+                // Use RAF to ensure class removal applies before resetting transform
+                requestAnimationFrame(() => {
+                    logoWrapper.style.transform = 'none'; // Reset position
+                });
+                window.removeEventListener('mousemove', handleMouseMove); // <<< Corrected removal target
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            }
+
+            // --- Resize Listener ---
+            let resizeTimeout;
+            function handleResize() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const wasDesktop = isDesktop;
+                    isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+                    if (wasDesktop && !isDesktop && isMouseFollowing) {
+                        console.log("Screen resized below breakpoint, stopping follow.");
+                        stopMouseFollow();
+                    }
+                    // Optional: Add logic here to re-start if window becomes desktop *and* section 2 is still visible
+                    // else if (!wasDesktop && isDesktop) { ... check section 2 display ... startMouseFollow(); }
+                }, 150);
+            }
+            window.addEventListener('resize', handleResize);
+
+            // --- Toggle on register/login clicks ---
+            registerLink.addEventListener('click', startMouseFollow);
+            loginLink.addEventListener('click', stopMouseFollow);
+
+            // --- Initial state check ---
+            const registrationFormDiv = document.getElementById('registration-form');
+            if (registrationFormDiv && window.getComputedStyle(registrationFormDiv).display !== 'none') {
+                startMouseFollow(); // Activate if registration form visible on load
+            } else {
+                stopMouseFollow(); // Ensure inactive initially
+            }
+
+        });
+    </script>
+</body>
+</html>
