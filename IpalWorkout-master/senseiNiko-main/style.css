@@ -1,125 +1,503 @@
 /* --- General Styles --- */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
-  word-wrap: break-word;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-    .intro-section h2 {
-        font-size: 2rem; /* Make headline larger */
-        margin-bottom: 1rem;
-        color: var(--text-color); /* Use your CSS variable if available */
+/* --- Header Styles --- */
+.header {
+    background-color: #0ed8f3;
+    color: white;
+    padding: 10px 20px;
+    text-align: center; /* Center everything on mobile */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack text and nav vertically (mobile-first) */
+    align-items: center; /* Center horizontally (mobile) */
+    justify-content: space-between; /* Added to distribute space */
 }
 
 .logo-link {
-  display: inline-block;
+    display: inline-block;
 }
 
 .header-logo {
-  width: 50px; /* Adjust this value to control the logo size in the header */
-  height: auto; /* Maintain aspect ratio */
-  vertical-align: middle;
-  margin-right: 10px; /* Add some spacing between the logo and navigation */
-  border-radius: 50%; /* Make the header logo circular */
-  object-fit: contain; /* Ensure the image fits within the circle */
+    width: 50px; /* Adjust this value to control the logo size in the header */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle;
+    margin-right: 10px; /* Add some spacing between the logo and navigation */
+    border-radius: 50%; /* Make the header logo circular */
+    object-fit: contain; /* Ensure the image fits within the circle */
 }
 
 .header-text {
-  font-size: 1.5rem; /* Or whatever size you want */
-  font-weight: bold;
-  margin-bottom: 10px; /* Space between text and nav on mobile */
-  order: 1;             /* Place text AFTER the nav on mobile */
+    font-size: 1.5rem; /* Or whatever size you want */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between text and nav on mobile */
+    order: 1; /* Place text AFTER the nav on mobile */
 }
-.header-text i {
-  margin: 0 5px; /* Adds 5 pixels of margin to the left and right of the icons */
-}
+
+    .header-text i {
+        margin: 0 5px; /* Adds 5 pixels of margin to the left and right of the icons */
+    }
 
 /* --- Logo Image Styles --- */
 .logo-section {
-  display: flex;
-  justify-content: center; /* Center the logo horizontally */
-  align-items: center;
-  padding: 20px;
-  max-width: 400px; /* Match the max-width of the login form */
-  width: 100%; /* Ensure it takes the full width of its container */
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;
+    padding: 20px;
+    max-width: 400px; /* Match the max-width of the login form */
+    width: 100%; /* Ensure it takes the full width of its container */
 }
 
 .logo-image {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .circle-image {
-  border-radius: 50%;
-  object-fit: contain; /* Or 'cover' depending on desired effect */
-  max-width: 100%; /* Make the image scale within its container */
-  max-height: 400px; /* Limit the maximum height to match login form */
-  width: auto;
-  height: auto;
+    border-radius: 50%;
+    object-fit: contain; /* Or 'cover' depending on desired effect */
+    max-width: 100%; /* Make the image scale within its container */
+    max-height: 400px; /* Limit the maximum height to match login form */
+    width: auto;
+    height: auto;
 }
 
 /* --- Navigation Styles --- */
 nav {
-  position: relative; /* For hamburger positioning */
-  width: 100%;
-  order: 2; /* Place nav BEFORE the text on mobile*/
-  display: flex;
-  justify-content: flex-start; /* Reset justify-content */
-  padding: 10px 20px; /* Add some padding around the nav area */
-  background-color: transparent; /* Make the nav background transparent by default on mobile */
+    position: relative; /* For hamburger positioning */
+    width: 100%;
+    order: 2; /* Place nav BEFORE the text on mobile*/
+    display: flex;
+    justify-content: flex-start; /* Reset justify-content */
+    padding: 10px 20px; /* Add some padding around the nav area */
+    background-color: transparent; /* Make the nav background transparent by default on mobile */
 }
 
 .menu {
-  list-style: none;
-  display: none; /* Hidden by default (mobile) */
-  flex-direction: column; /* Stack links vertically (mobile) */
-  align-items: stretch; /* Make each item take the full width */
-  margin: 0;
-  padding: 0;
-  width: 100%; /* Full width for the menu when open */
-  /* background-color: #f311a0; Removed pink background from here */
+    list-style: none;
+    display: none; /* Hidden by default (mobile) */
+    flex-direction: column; /* Stack links vertically (mobile) */
+    align-items: stretch; /* Make each item take the full width */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Full width for the menu when open */
+    /* background-color: #f311a0; Removed pink background from here */
 }
 
-.menu.open {
-  display: flex; /* Show when hamburger is clicked */
+    .menu.open {
+        display: flex; /* Show when hamburger is clicked */
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px; /* Add some space between the rectangles on mobile */
+    }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            display: block; /* Make the link fill the entire list item */
+            box-sizing: border-box;
+            background-color: #f311a0; /* Set the pink background for the rectangles */
+            border-radius: 5px; /* Add rounded corners back */
+            transition: background-color 0.3s; /* Hover effect will be on the .menu itself */
+        }
+
+            .menu li a:hover {
+                background-color: #555; /* Darken on hover */
+            }
+
+/* --- Hamburger Button Styles --- */
+#menu-toggle {
+    cursor: pointer;
+    position: absolute; /* Keep it positioned absolutely */
+    top: -15px;
+    right: 20px; /* Adjust right margin to match nav padding */
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    z-index: 100;
 }
 
-.menu li {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 5px; /* Add some space between the rectangles on mobile */
+    #menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: blue;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+        #menu-toggle span:last-child {
+            margin-bottom: 0;
+        }
+
+    /* Hamburger Animation */
+    #menu-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: red;
+    }
+
+    #menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+        background-color: red;
+    }
+
+    #menu-toggle.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: red;
+    }
+
+/* --- Desktop Styles (Larger Screens) --- */
+@media (min-width: 769px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-text {
+        margin-bottom: 0;
+        order: 0;
+        margin-left: auto; /* Push to the right */
+        margin-right: 100px; /* Add some right margin for spacing */
+        text-align: right; /* Align text to the right on desktop */
+    }
+
+    nav {
+        padding: 10px 20px;
+        width: auto;
+        order: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-left: none;
+        border-right: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent; /* No background on desktop menu */
+    }
+
+    nav .menu li {
+        width: auto;
+        margin-bottom: 0;
+        text-align: initial;
+        margin-left: 10px;
+    }
+
+        nav .menu li:first-child {
+            margin-left: 0;
+        }
+
+        nav .menu li a {
+            display: block;
+            width: auto;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #f311a0;
+            padding: 10px 20px;
+        }
+
+            nav .menu li a:hover {
+                background-color: #555;
+            }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Grid layout for login page on desktop */
+    body.login-page main { /* Target the main element within the login page */
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Keep main aligned to center vertically */
+        flex-grow: 1;
+        overflow-x: hidden;
+    }
+
+    body.login-page .main-content { /* Target main-content only on the login page */
+        display: grid;
+        grid-template-columns: auto auto; /* Let content define column widths */
+        /*grid-template-rows: auto auto;  Let content define row heights MIGHT HAVE TO UNCOMMENT THIS LINE !!!*/
+        justify-content: center; /* Center the grid horizontally */
+        align-items: start; /* Vertically align items TO THE START */
+        gap: 20px; /* Space between grid items */
+        max-width: 900px; /* Adjust as needed for the overall width */
+        margin: 0 auto; /* Center the container on the page */
+        padding: 20px; /* Add some padding around the main content */
+    }
+
+    body.login-page .logo-section { /* Target logo-section only on the login page */
+        grid-column: 1; /* Place in the first column */
+        grid-row: 1; /* Place in the first row */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: start; /* Align logo section itself to the top of the grid row */
+    }
+
+    body.login-page .login-section {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; /* Changed */
+        align-items: start; /* Align form to the top of its grid area */
+        width: 100%;
+    }
+
+    body.login-page #registration-form {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        align-self: start; /* Align registration form to top as well */
+    }
+
+
+    body.login-page .login-form { /* Ensure the form maintains its max width */
+        max-width: 400px; /* Keep the max-width of the form */
+        width: 100%; /* Make the form responsive within its section */
+        margin: 0 auto; /* Center within the section */
+    }
+
+    body.login-page .scrolling-text-container {
+        grid-column: 1 / 3; /* Span across both columns */
+        grid-row: 2; /* Place BELOW logo/login */
+        width: 100%; /* Ensure it spans the grid columns */
+        /* max-width: 500px; */ /* <<< REMOVED max-width */
+        /* margin-left: auto; */ /* REMOVED */
+        /* margin-right: auto; */ /* REMOVED */
+        margin-top: 30px; /* Keep vertical space */
+        margin-bottom: 30px; /* Keep vertical space */
+    }
+
+    body.login-page #homepage-videos {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        margin-bottom: 30px;
+        width: 100%; /* Ensure it spans the grid columns */
+        display: block; /* Or flex if you want videos side-by-side */
+        /* If using flex for side-by-side videos: */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: flex-start; */
+        /* gap: 20px; */
+        /* flex-wrap: wrap; */
+    }
 }
 
-        /* Base style for the icons */
-        .intro-section li i.fas { /* Target Font Awesome icons within list items */
-            margin-right: 0.75em; /* Space between icon and text */
-            width: 1.2em; /* Give icon fixed width for alignment */
-  text-align: center;
-            font-size: 1.2em; /* Optional: Adjust size */
-            /* Color is set individually below */
+/* --- Contact Page Specific Styles --- */
+.contact-content {
+    padding: 20px;
 }
+
+/* --- Dark Mode Styles --- */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+    body.dark-mode .header,
+    body.dark-mode nav {
+        background-color: #1e1e1e;
+    }
+
+    body.dark-mode .menu li a {
+        color: #fff;
+        background-color: #f311a0; /* Darker background for the rectangles in dark mode */
+    }
+
+        body.dark-mode .menu li a:hover {
+            background-color: #555; /* Hover effect in dark mode */
+        }
+
+    body.dark-mode #menu-toggle span {
+        background-color: #00f;
+    }
+
+    body.dark-mode #menu-toggle.open span {
+        background-color: #f00;
+    }
+
+    body.dark-mode #color-mode-switch svg {
+        fill: #fff;
+    }
+
+    body.dark-mode .header-text {
+        color: #fff;
+    }
+
+/* Style the dark mode switch */
+#color-mode-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+    #color-mode-switch input[type="checkbox"] { /* attempt to delete the square in the dark mode toggle */
+        display: none;
+    }
+
+    #color-mode-switch svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 5px;
+    }
+
+footer {
+    background-color: #333;
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+/* Default main styles (mobile first) */
+main {
+    display: flex; /* Make main a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-grow: 1; /* Allow it to grow to fill available space */
+    overflow-x: hidden;
+    width: 100%; /* Ensure main takes full width */
+}
+/* --- New Main Content Container --- */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    align-items: center; /* Center horizontally on mobile */
+    width: 100%; /* Ensure it takes full width */
+    padding: 0 15px; /* Add padding for mobile */
+}
+
+/* --- About Page Styles --- */
+.about-page .about-content {
+    padding: 20px;
+    text-align: center;
+}
+
+    .about-page .about-content h1 {
+        text-align: center;
+    }
+
+.about-page .about-image {
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+body.dark-mode .about-page .about-content {
+    background-color: #1e1e1e;
+}
+
+/* --- Login Form Styles --- */
+
+.login-section {
+    width: 100%; /* Take full width of the main-content */
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center the content horizontally */
+    padding: 20px 0; /* Add some vertical padding if needed */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    /* display: flex; Added by JS potentially, ensure it's flex if needed initially */
+}
+
+.login-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Use full width of its container (.login-section) */
+    max-width: 400px; /* <<< KEEPING this max-width */
+    box-sizing: border-box;
+    margin: 0 auto; /* Center horizontally within .login-section */
+}
+
+    .login-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .login-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .login-form .form-group { /* Add spacing below form groups */
+        margin-bottom: 15px;
+    }
+
+    .login-form button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .login-form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
 .register-link {
-  text-align: center;
-  margin-top: 15px;
-}
-        /* Vivid Blue */
-        .intro-section li.icon-sync .fas {
-            color: #27ae60;
+    text-align: center;
+    margin-top: 15px;
 }
 
-.register-link a:hover {
-  text-decoration: underline;
-}
-        /* Vivid Red */
-        .intro-section li.icon-trophy .fas {
-            color: #f39c12;
+    .register-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+/* Dark Mode Styles for the Form */
+body.dark-mode .login-form {
+    background-color: #383838;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* White shadow */
 }
 
     body.dark-mode .login-form input[type="text"],
@@ -127,7 +505,7 @@ nav {
         background-color: #1e1e1e;
         color: #fff;
         border: 1px solid #555;
-}
+    }
 
     body.dark-mode .login-form button[type="submit"] {
         background-color: #0056b3;
@@ -138,7 +516,7 @@ body.dark-mode .register-link a {
 }
 
 .error-message {
-  color: red;
+    color: red;
     margin-top: 10px;
     text-align: center; /* Center the error message */
 }
@@ -755,7 +1133,7 @@ body.login-page #registration-form #homepage-videos {
     /* border: 2px solid purple; */ /* Optional for testing */
 }
 
-.success-message {
-    color: green;
-    margin-top: 10px;
+/* Ensure original wrapper doesn't have conflicting transform */
+.sticky-logo-wrapper {
+    transform: none;
 }

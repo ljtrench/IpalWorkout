@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\IpalWorkout-master",
+    "\\IpalWorkout-master\\senseiNiko-main",
+    "\\IpalWorkout-master\\senseiNiko-main\\backend"
   ],
+  "SelectedNode": "\\IpalWorkout-master\\senseiNiko-main\\backend\\package.json",
   "PreviewInSolutionExplorer": false
 }
