@@ -14,10 +14,11 @@ app.use(bodyParser.json());
 
 // MySQL Connection
 const pool = mysql.createPool({
-    host: '127.0.0.1',      // Change if using a remote MySQL server
-    user: 'root',           // MySQL username
-    password: 'Ipalrobot1!', // MySQL password
-    database: 'ipal'        // Your MySQL database name
+    host: 'database-1.c4foy0kcilc1.us-east-1.rds.amazonaws.com',      // Change if using a remote MySQL server
+    user: 'admin',           // MySQL username
+    password: 'IpalRobot1!', // MySQL password
+    database: 'database-1  ',        // Your MySQL database name
+    port: 3306
 });
 // Has To Match SQL Schema
 pool.query(`
